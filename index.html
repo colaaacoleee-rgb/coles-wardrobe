@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cole's Wardrobe</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<div class="nav">
+  <h2>Cole’s Wardrobe</h2>
+  <div class="links">
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('wardrobe')">Wardrobe</button>
+    <button onclick="showPage('generator')">Outfits</button>
+    <button onclick="showPage('planner')">Planner</button>
+  </div>
+</div>
+
+<div id="home" class="page active">
+  <h1>What should I wear today?</h1>
+  <button onclick="generateRandomOutfit()">Generate Outfit</button>
+  <div id="homeOutfit"></div>
+</div>
+
+<div id="wardrobe" class="page">
+  <h1>Your Wardrobe</h1>
+
+  <input id="name" placeholder="Item name">
+  <input id="category" placeholder="Category (shirt, pants, shoes)">
+  <input type="file" id="image">
+  <button onclick="addItem()">Add Item</button>
+
+  <div id="wardrobeGrid"></div>
+</div>
+
+<div id="generator" class="page">
+  <h1>Outfit Generator</h1>
+
+  <select id="style">
+    <option>Streetwear</option>
+    <option>Casual</option>
+    <option>School</option>
+    <option>Gym</option>
+  </select>
+
+  <button onclick="generateOutfit()">Create Outfit</button>
+
+  <div id="outfitResult"></div>
+</div>
+
+<div id="planner" class="page">
+  <h1>Weekly Planner</h1>
+  <p>Coming soon...</p>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
